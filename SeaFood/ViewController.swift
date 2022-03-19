@@ -55,11 +55,13 @@ class ViewController:   UIViewController,
                 fatalError("Model failed to process image")
             }
             if let firstResult = results.first {
-                if firstResult.identifier.contains("hotdog") {
-                    self.navigationItem.title = "HOTDOG!"
-                } else {
-                    self.navigationItem.title = "NOT HOTDOG!"
-                }
+                
+                self.navigationItem.title = firstResult.identifier
+//                if firstResult.identifier.contains("hotdog") {
+//                    self.navigationItem.title = "HOTDOG!"
+//                } else {
+//                    self.navigationItem.title = "NOT HOTDOG!"
+//                }
             }
         }
         
